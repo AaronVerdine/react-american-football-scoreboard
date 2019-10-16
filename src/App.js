@@ -2,12 +2,17 @@
 import React, { useState } from "react";
 import "./App.css";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import HomeTeam from "./HomeTeam";
 import AwayTeam from "./AwayTeam";
 =======
 >>>>>>> parent of 9b2cafe... Clean up file structure, create HomeTeam.js to contain Home Team info & score
+=======
+
+import HomeTeam from "./HomeTeam";
+>>>>>>> 9b2cafe... Clean up file structure, create HomeTeam.js to contain Home Team info & score
 import BottomRow from "./BottomRow";
 import TeamButtons from "./Buttons";
 
@@ -20,7 +25,9 @@ function App() {
   return (
     <div className="container">
       <section className="scoreboard">
+
         <div className="topRow">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <HomeTeam />
           <AwayTeam />
@@ -34,6 +41,13 @@ function App() {
             <div className="home__score">{homeScore}</div>
           </div>
 >>>>>>> parent of 9b2cafe... Clean up file structure, create HomeTeam.js to contain Home Team info & score
+=======
+          <HomeTeam />
+        </div>
+
+            {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+            
+>>>>>>> 9b2cafe... Clean up file structure, create HomeTeam.js to contain Home Team info & score
           <div className="timer">00:03</div>
         </div>
         <BottomRow />
