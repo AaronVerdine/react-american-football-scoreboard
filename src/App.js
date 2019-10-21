@@ -2,8 +2,15 @@
 import React, { useState } from "react";
 import "./App.css";
 
+<<<<<<< HEAD
 import BottomRow from "./Components/BottomRow";
 import TeamNames from "./Components/TeamNames";
+=======
+import HomeTeam from "./HomeTeam";
+import AwayTeam from "./AwayTeam";
+import BottomRow from "./BottomRow";
+import TeamButtons from "./Buttons";
+>>>>>>> ab96ff9be2ae6b555d1da532e6b6ce4e414667bf
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
@@ -15,6 +22,7 @@ function App() {
     <div className="container">
       <section className="scoreboard">
         <div className="topRow">
+<<<<<<< HEAD
           <div className="timer">00:03</div>
 
           {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
@@ -65,6 +73,26 @@ function App() {
             Away Reset
           </button>
         </div>
+=======
+          <HomeTeam />
+          <AwayTeam />
+          {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+          {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+
+          <div className="home__score">{homeScore}</div>
+        </div>
+
+        {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
+
+        <div className="timer">00:03</div>
+
+        <BottomRow />
+      </section>
+
+      <section className="buttons">
+        {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
+        <TeamButtons />
+>>>>>>> ab96ff9be2ae6b555d1da532e6b6ce4e414667bf
       </section>
     </div>
   );
