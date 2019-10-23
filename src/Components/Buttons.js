@@ -1,59 +1,57 @@
 import React, { useState } from "react";
+import "../App.css";
 
-function TeamButtons() {
-  const [awayScore, updateAwayScore] = useState(32);
-  const [homeScore, updateHomeScore] = useState(32);
-
+const TeamButtons = props => {
   return (
     <div>
       <div className="homeButtons">
-        <div className="home__score">{homeScore}</div>
+        <div className="home__score">{props.homeScore}</div>
 
         <button
           className="homeButtons__touchdown"
-          onClick={() => updateHomeScore(homeScore + 7)}
+          onClick={() => props.updateHomeScore(props.homeScore + 7)}
         >
           Home Touchdown
         </button>
 
         <button
           className="homeButtons__fieldGoal"
-          onClick={() => updateHomeScore(homeScore + 3)}
+          onClick={() => props.updateHomeScore(props.homeScore + 3)}
         >
           Home Field Goal
         </button>
         <button
           className="homeButtons__reset"
-          onClick={() => updateHomeScore(32)}
+          onClick={() => props.updateHomeScore(32)}
         >
           Home Reset
         </button>
       </div>
 
       <div className="awayButtons">
-        <div className="away__score">{awayScore}</div>
+        <div className="away__score">{props.awayScore}</div>
 
         <button
           className="awayButtons__touchdown"
-          onClick={() => updateAwayScore(awayScore + 7)}
+          onClick={() => props.updateAwayScore(props.awayScore + 7)}
         >
           Away Touchdown
         </button>
         <button
           className="awayButtons__fieldGoal"
-          onClick={() => updateAwayScore(awayScore + 3)}
+          onClick={() => props.updateAwayScore(props.awayScore + 3)}
         >
           Away Field Goal
         </button>
         <button
           className="awayButtons__reset"
-          onClick={() => updateAwayScore(32)}
+          onClick={() => props.updateAwayScore(32)}
         >
           Away Reset
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default TeamButtons;
